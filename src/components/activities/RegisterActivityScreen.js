@@ -83,7 +83,7 @@ export const RegisterActivityScreen = () => {
                                 <p
                                     className='text-danger text-center'
                                 >
-                                    La actividad necesita un título.
+                                    La actividad necesita un Título.
                                 </p>
                             }
                             <div className='row'>
