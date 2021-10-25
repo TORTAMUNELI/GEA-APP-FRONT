@@ -1,0 +1,18 @@
+    body{
+
+    }
+    button{
+        background-color: coral;
+    }
+
+    .card{
+        margin-top: 4.5%;
+        border:5px;
+        border-color: #85929E;
+        border-style:solid;
+        background: #85929E;
+    }
+    h1{
+        color: cornsilk;
+    }
+    

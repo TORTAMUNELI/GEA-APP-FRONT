@@ -3,6 +3,7 @@ import { getRols } from '../../helpers/getRols';
 import { useForm } from '../../hooks/useForm'
 import axios from 'axios';
 import { useHistory } from 'react-router-dom';
+import './styles.css';
 
 export const RegisterScreen = () => {
     const history = useHistory();
@@ -73,7 +74,7 @@ export const RegisterScreen = () => {
                 <div className='col-md-2'></div>
                 <div className='col-md-8'>
                     <div className='card'>
-                        <h2 className='text-center mt-5'>Regístrese</h2>
+                        <h1 className='text-center mt-5'>Regístrese</h1>
                         <form className='mt-3' onSubmit={handleSubmit}>
                             <div className='row'>
                                 <div className='col-md-2'></div>
@@ -186,7 +187,7 @@ export const RegisterScreen = () => {
                                     </div>
                                     <div className="d-grid gap-2 mb-4">
                                         <button
-                                            className="btn btn-outline-primary mb-3 p-2"
+                                            className="btn btn-dark mb-3 p-2"
                                             type="submit"
                                         >
                                             Regístrese

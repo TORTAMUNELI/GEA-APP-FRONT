@@ -4,6 +4,7 @@ import { useForm } from '../../hooks/useForm';
 import axios from 'axios';
 import { AuthContext } from '../auth/AuthContext';
 import { types } from '../types/types';
+import './styles.css';
 
 export const LoginScreen = () => {
 
@@ -88,7 +89,7 @@ export const LoginScreen = () => {
                                     />
                                     <div className="d-grid gap-2">
                                         <button
-                                            className="btn btn-outline-primary mb-3 p-2"
+                                            className="btn btn-dark mb-3 p-2"
                                             type="submit"
                                         >
                                             Iniciar Sesión
@@ -97,9 +98,9 @@ export const LoginScreen = () => {
                                 </form>
                                 <p className='text-center mb-5'>
                                     ¿Aún no tiene una cuenta?
-                                    <span >
+                                    <span>
                                         <Link className='m-2' to='/registro'>
-                                            Regístrese
+                                            <b>Regístrese</b>
                                         </Link>
                                     </span>
                                 </p>

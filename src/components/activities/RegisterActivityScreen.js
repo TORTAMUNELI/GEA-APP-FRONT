@@ -64,7 +64,7 @@ export const RegisterActivityScreen = () => {
         <div id='container_login'>
             <div className='row'>
                 <div className='col-md-6 flex'>
-                    <h1 >REGISTRAR ACTIVIDAD</h1>
+                    <h2 >REGISTRAR ACTIVIDAD</h2>
                 </div>
                 <div className='col-md-6'>
                     <div className='card flex'>
@@ -129,7 +129,7 @@ export const RegisterActivityScreen = () => {
                             />
                             <div className="d-grid gap-2">
                                 <button
-                                    className="btn btn-outline-primary pt-2 pb-2"
+                                    className="btn-dark pt-2 pb-2"
                                     type="submit"
                                 >
                                     Registrar Actividad
