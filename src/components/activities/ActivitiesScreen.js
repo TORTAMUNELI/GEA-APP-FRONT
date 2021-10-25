@@ -3,7 +3,7 @@ import React from 'react'
 export const ActivitiesScreen = () => {
     return (
         <>
-            <h1>Actividades Screen</h1>
+            <h2 className='title'>Actividades Registradas</h2>
             <hr />
         </>
     )

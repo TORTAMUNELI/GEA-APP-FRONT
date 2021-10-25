@@ -16,13 +16,11 @@ export const Navbar = () => {
     }
 
     return (
-        <nav className="navbar navbar-expand-sm navbar-dark bg-dark" style={{ height: '80px' }} >
-            <Link
-                className="navbar-brand"
-                to="/">
-                GESTOR DE ACTIVIDADES EDUCATIVAS
-            </Link>
-
+        <nav className="navbar navbar-expand-sm navbar navbar-dark bg-dark" style={{ height: '80px' }} >
+            <a className="navbar-brand" href="http://localhost:3000/">
+            <img src="https://cdn-icons-png.flaticon.com/512/609/609803.png" width="30" height="30" alt="" >
+            </img>
+            </a>
 
             <div className="navbar-collapse w-100">
                 <div className="navbar-nav">
@@ -32,7 +30,7 @@ export const Navbar = () => {
                         exact
                         to="/registrar-actividad"
                     >
-                        Registrar actividad
+                        REGISTRAR ACTIVIDAD
                     </NavLink>
                 </div>
             </div>
@@ -48,8 +46,7 @@ export const Navbar = () => {
                         onClick={handleLogout}
                         className=" nav-item nav-link text-end"
                         to='/login'
-                    >
-                        Logout
+                    > Cerrar Sesion
                     </Link>
                 </ul>
             </div>
