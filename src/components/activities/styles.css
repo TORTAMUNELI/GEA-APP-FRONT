@@ -1,5 +1,6 @@
 #container_login {
-  margin-top: 4.5%;
+  margin-top: 2.5%;
+  margin-bottom: 2.5%;
 }
 
 #container_login .flex {
@@ -18,7 +19,35 @@
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
-.title{
-  color: #2C3E50;
+.title {
+  color: #2c3e50;
+}
 
+.card-grid {
+  margin-top: 2%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-self: stretch;
+}
+
+.card_activity {
+  align-content: center;
+  border: 1px solid grey;
+  border-radius: 6px;
+  margin-bottom: 2%;
+  margin-left: 10%;
+  margin-right: 10%;
+  overflow: hidden;
+  padding: 4rem;
+}
+
+.fechas {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+textarea {
+  height: 25rem;
 }

@@ -17,15 +17,13 @@ export const RegisterActivityScreen = () => {
         nombre: '',
         fecha_inicio: new Date().toISOString().slice(0, 10),
         fecha_final: new Date().toISOString().slice(0, 10),
-        desc: ''
     });
 
-    const { nombre, fecha_inicio, fecha_final, desc } = formValues;
+    const { nombre, fecha_inicio, fecha_final } = formValues;
 
 
     const handleSubmit = (e) => {
         e.preventDefault();
-
         if (nombre === '') {
             setErrTitulo(true);
             return;
@@ -41,7 +39,7 @@ export const RegisterActivityScreen = () => {
             titulo: nombre,
             fecha_inicio,
             fecha_final,
-            descripcion: desc
+            descripcion: document.getElementById('mytextarea').value
         }
 
         const { token } = JSON.parse(window.localStorage.getItem('user'));
@@ -63,82 +61,77 @@ export const RegisterActivityScreen = () => {
     return (
         <div id='container_login'>
             <div className='row'>
-                <div className='col-md-6 flex'>
+                <div style={{ textAlign: 'center' }}>
                     <h2 >REGISTRAR ACTIVIDAD</h2>
                 </div>
-                <div className='col-md-6'>
-                    <div className='card flex'>
-                        <form onSubmit={handleSubmit}>
-                            <input
-                                className='form-control pt-2 pb-2'
-                                type='text'
-                                placeholder='Título de la actividad'
-                                autoComplete='off'
-                                name='nombre'
-                                value={nombre}
-                                onChange={handleInputChange}
-                            />
+                <div className='card'>
+                    <form onSubmit={handleSubmit}>
+                        <input
+                            className='form-control pt-2 pb-2'
+                            type='text'
+                            placeholder='Título de la actividad'
+                            autoComplete='off'
+                            name='nombre'
+                            value={nombre}
+                            onChange={handleInputChange}
+                        />
+                        {
+                            errTitulo &&
+                            <p
+                                className='text-danger text-center'
+                            >
+                                La actividad necesita un Título.
+                            </p>
+                        }
+                        <div className='row'>
+                            <div className='col-md-6'>
+                                <label htmlFor='fechaInicio'>Fecha inicio</label>
+                                <input
+                                    id='fechaInicio'
+                                    autoComplete='off'
+                                    className='form-control pt-2 pb-2'
+                                    type='date'
+                                    placeholder='Fecha de inicio'
+                                    name='fecha_inicio'
+                                    value={fecha_inicio}
+                                    onChange={handleInputChange}
+                                />
+                            </div>
+                            <div className='col-md-6'>
+                                <label htmlFor='fecha-final'>Fecha final</label>
+                                <input
+                                    id='fecha-final'
+                                    autoComplete='off'
+                                    className='form-control pt-2 pb-2'
+                                    type='date'
+                                    placeholder='Fecha final'
+                                    name='fecha_final'
+                                    value={fecha_final}
+                                    onChange={handleInputChange}
+                                />
+                            </div>
                             {
-                                errTitulo &&
+                                errFecha &&
                                 <p
                                     className='text-danger text-center'
                                 >
-                                    La actividad necesita un Título.
+                                    La fecha final debe ser mayor o igual a la fecha inicial.
                                 </p>
                             }
-                            <div className='row'>
-                                <div className='col-md-6'>
-                                    <input
-                                        autoComplete='off'
-                                        className='form-control pt-2 pb-2'
-                                        type='date'
-                                        placeholder='Fecha de inicio'
-                                        name='fecha_inicio'
-                                        value={fecha_inicio}
-                                        onChange={handleInputChange}
-                                    />
-                                </div>
-                                <div className='col-md-6'>
-                                    <input
-                                        autoComplete='off'
-                                        className='form-control pt-2 pb-2'
-                                        type='date'
-                                        placeholder='Fecha final'
-                                        name='fecha_final'
-                                        value={fecha_final}
-                                        onChange={handleInputChange}
-                                    />
-                                </div>
-                                {
-                                    errFecha &&
-                                    <p
-                                        className='text-danger text-center'
-                                    >
-                                        La fecha final debe ser mayor o igual a la fecha inicial.
-                                    </p>
-                                }
-                            </div>
-                            <input
-                                autoComplete='off'
-                                className='form-control pt-2 pb-2'
-                                type='text'
-                                placeholder='Descripción de la actividad'
-                                name='desc'
-                                value={desc}
-                                onChange={handleInputChange}
-                            />
-                            <div className="d-grid gap-2">
-                                <button
-                                    className="btn-dark pt-2 pb-2"
-                                    type="submit"
-                                >
-                                    Registrar Actividad
-                                </button>
-                            </div>
-                        </form>
-                    </div>
+                        </div>
+                        <textarea id="mytextarea" />
+
+                        <div className="d-grid gap-2">
+                            <button
+                                className="btn-dark pt-2 pb-2"
+                                type="submit"
+                            >
+                                Registrar Actividad
+                            </button>
+                        </div>
+                    </form>
                 </div>
-            </div >
+            </div>
         </div >
     );
 }

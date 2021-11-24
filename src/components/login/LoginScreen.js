@@ -48,12 +48,15 @@ export const LoginScreen = () => {
 
 
     return (
-        <div className='container' style={{ marginTop: '10%' }}>
+        <div className='container' style={{ marginTop: '5%' }}>
             <div className='row'>
                 <div className='col-md-3'></div>
                 <div className='col-md-6'>
+                    <h1 className='text-center' style={{ color: 'black' }}>
+                        GEA
+                    </h1>
                     <div className='card'>
-                        <h1 className='text-center mt-5'>Iniciar Sesión</h1>
+                        <h1 className='text-center mt-5' style={{ color: 'cornsilk' }}>Iniciar Sesión</h1>
                         <div className='row'>
                             <div className='col-md-2'></div>
                             <div className='col-md-8'>
@@ -65,7 +68,6 @@ export const LoginScreen = () => {
                                         Email o contraseña incorrectos. Por favor inténtelo de nuevo.
                                     </p>
                                 }
-
                                 <form className='mt-2' onSubmit={handleSubmit}>
                                     <input
                                         autoComplete='off'
