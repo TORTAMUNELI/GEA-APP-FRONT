@@ -17,10 +17,17 @@ export const Navbar = () => {
 
     return (
         <nav className="navbar navbar-expand-sm navbar navbar-dark bg-dark" style={{ height: '80px' }} >
-            <a className="navbar-brand" href="http://localhost:3000/">
-            <img src="https://cdn-icons-png.flaticon.com/512/609/609803.png" width="30" height="30" alt="" >
-            </img>
-            </a>
+            <NavLink
+                className="navbar-brand"
+                to="/"
+            >
+                <img
+                    src="https://cdn-icons-png.flaticon.com/512/609/609803.png"
+                    width="30"
+                    height="30"
+                    alt=""
+                />
+            </NavLink>
 
             <div className="navbar-collapse w-100">
                 <div className="navbar-nav">

@@ -3,7 +3,6 @@ import { getRols } from '../../helpers/getRols';
 import { useForm } from '../../hooks/useForm'
 import axios from 'axios';
 import { useHistory } from 'react-router-dom';
-import './styles.css';
 
 export const RegisterScreen = () => {
     const history = useHistory();
@@ -69,12 +68,15 @@ export const RegisterScreen = () => {
     }, []);
 
     return (
-        <div className='container' style={{ marginTop: '7.5%' }}>
+        <div className='container' style={{ marginTop: '3.5%' }}>
             <div className='row'>
                 <div className='col-md-2'></div>
                 <div className='col-md-8'>
+                    <h1 className='text-center' style={{ color: 'black' }}>
+                        GEA
+                    </h1>
                     <div className='card'>
-                        <h1 className='text-center mt-5'>Regístrese</h1>
+                        <h1 className='text-center mt-5' style={{ color: 'cornsilk' }}>Regístrese</h1>
                         <form className='mt-3' onSubmit={handleSubmit}>
                             <div className='row'>
                                 <div className='col-md-2'></div>
